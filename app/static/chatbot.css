@@ -1,0 +1,620 @@
+/* Previous CSS styles remain the same until the message styling section */
+
+/* Enhanced Message Styling */
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Markdown Content Styling */
+.markdown-content .message-content {
+    line-height: 1.5;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+    margin: 1em 0 0.5em 0;
+    color: #333;
+}
+
+.markdown-content p {
+    margin: 0.5em 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin: 0.5em 0;
+    padding-left: 2em;
+}
+
+.markdown-content li {
+    margin: 0.3em 0;
+}
+
+.markdown-content code {
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-content pre {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 0.5em 0;
+}
+
+.markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid #ddd;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    color: #666;
+}
+
+.markdown-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.markdown-content table th {
+    background-color: #f4f4f4;
+}
+
+/* Updated Input Styling */
+.prompt-input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: none;
+    max-height: calc(5 * 1.5em);
+    overflow-y: auto;
+}
+
+/* Rest of the CSS remains the same */
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container Styling */
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+header h2 {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+header h2 span {
+    color: #d1ecf1;
+}
+
+/* Quick Action Cards Styling */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.card:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Chat Window Styling */
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px; /* Space for the input section */
+}
+
+/* Message Styling */
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* User Message Styling */
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+/* Bot Message Styling */
+.bot-message {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Placeholder Message Styling */
+.placeholder-message {
+    background-color: #f0f0f0;
+    color: #777;
+    text-align: center;
+    font-style: italic;
+    max-width: 60%;
+    align-self: center;
+}
+
+/* Typing Indicator Styling */
+.typing-indicator {
+    display: none; /* Hidden by default */
+    align-self: flex-start; /* Align with bot messages */
+    background-color: #f0f0f0;
+    color: #777;
+    text-align: left;
+    font-style: italic;
+    max-width: 60%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.typing-indicator p {
+    display: flex;
+    align-items: center;
+}
+
+.typing-indicator .dot {
+    height: 8px;
+    width: 8px;
+    margin-left: 5px;
+    background-color: #777;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.2;
+    animation: blink 1.4s infinite;
+}
+
+.typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* Timestamp Styling */
+.timestamp {
+    display: block;
+    font-size: 0.75em;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Input Section Styling */
+.input-section {
+    padding: 15px 20px;
+    background-color: rgba(241, 241, 241, 0.95);
+    border-top: 1px solid #ddd;
+    position: fixed; /* Keep it fixed at the bottom */
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set a fixed height */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Input Form Styling */
+.input-form {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Input Container Styling */
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Prompt Input Styling */
+.prompt-input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px; /* Space for the send icon if used */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.prompt-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Optional: Send Icon Styling */
+.send-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #ff7300;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.send-icon:hover {
+    color: #d61038;
+}
+
+/* Hide send-icon when not used */
+.send-icon {
+    display: none; /* Hide the icon if not using */
+}
+
+/* Show send-icon when using */
+.input-container:hover .send-icon {
+    display: block;
+}
+
+/* Scrollbar Styling for Chat Window */
+.chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 8px;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+
+    .input-form {
+        max-width: 90%;
+    }
+
+    .prompt-input {
+        font-size: 0.9em;
+    }
+
+    .send-icon {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 0.9em;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .message {
+        max-width: 85%;
+        font-size: 0.9em;
+    }
+
+    .input-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Show and style the send icon */
+
+/* Show and style the send icon with a circular border */
+.send-icon {
+    display: inline-block; /* Now it's visible */
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #d6d917; /* Add a blue color */
+    vertical-align: middle; /* Align it with the input */
+    
+    /* Add circular border */
+    border: 2px solid #0ac850; /* Border color matching icon */
+    border-radius: 50%; /* Make the border circular */
+    padding: 10px; /* Adjust padding to create a circular shape */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Change color on hover */
+.product-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.product-image {
+    width: 100px;  /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+.product-details {
+    flex-grow: 1;
+    margin-left: 10px; /* Add some spacing from the image */
+}
+.product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    max-width: calc(100% - 110px); /* Ensure name doesn't overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product-price {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+.product-description {
+    color: #666;
+    font-size: 0.9em;
+    max-height: 3em; /* Limit description height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.send-icon:hover {
+    color: #4613e2;
+    background-color: #067d43;
+    border-color: #2e0112;
+}
+
+}
+
+/* Container for image and button */
+.product-image-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the product button */
+  .product-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #007BFF; /* Primary blue color */
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+
+  .products-container {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.products-container::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar */
+    width: 100%; /* Full width */
+}
+
+.products-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.product-card {
+    flex: 0 0 250px; /* Fixed width for cards */
+    min-width: 250px; /* Ensure consistent sizing */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block; /* Allows horizontal alignment */
+    transition: transform 0.3s ease;
+    margin-right: 15px; /* Space between cards */
+}
+
+.product-card:last-child {
+    margin-right: 0; /* Remove margin from last card */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image-container {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.product-details {
+    padding: 10px;
+    text-align: left;
+}
+
+.product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.view-product-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.7em;
+    margin: 0 10px 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.view-product-btn:hover {
+    background-color: #0056b3;
+}
